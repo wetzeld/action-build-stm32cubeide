@@ -29,7 +29,7 @@ runs:
           -v "${GITHUB_WORKSPACE}:/github/workspace" \
           -v "${ACTION_PATH}:/github/action:ro" \
           "xanderhendriks/stm32cubeide:${STM32CUBEIDE_VERSION}" \
-          bash ls -al /github/action/
+          ls -al /github/action/
         docker run --rm \
           --workdir /github/workspace \
           -v "${GITHUB_WORKSPACE}:/github/workspace" \
