@@ -23,7 +23,7 @@ runs:
         PROJECT_TARGET: ${{ inputs.project-target }}
         STM32CUBEIDE_VERSION: ${{ inputs.stm32cubeide-version }}
       run: |
-        set -euo pipefail
+        set -euxo pipefail
         docker run --rm \
           --workdir /github/workspace \
           -v "${GITHUB_WORKSPACE}:/github/workspace" \
