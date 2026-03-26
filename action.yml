@@ -24,6 +24,7 @@ runs:
         STM32CUBEIDE_VERSION: ${{ inputs.stm32cubeide-version }}
       run: |
         set -euxo pipefail
+        ls -al "${ACTION_PATH}"
         docker run --rm \
           --workdir /github/workspace \
           -v "${GITHUB_WORKSPACE}:/github/workspace" \
